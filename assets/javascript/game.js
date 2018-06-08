@@ -1,3 +1,4 @@
+//----------------------------------------
 //Global varriables
 //----------------------------------------
 // Define the list of words the computer will select from
@@ -9,7 +10,6 @@ var wordList = [
   "blade runner",
   "voight kampff",
   "replicant"
-
 ];
 // Define the list of possible letter selections
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q","r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -148,8 +148,8 @@ function hasUserWon() {
     //user has won, increment wins
     wins++;
     //add image and audio HTML if you have time. 
-  var deckard="<img <src=\"assets/images/deckard.jpg\" class=\"img-responsive\" alt=\"Blade Runner Deckard\">";
-  document.querySelector("deckard").innerHTML = deckard;
+  var deckard='<img src="assets/images/deckard.jpg" class="img-responsive" alt="Blade Runner Deckard">';
+  document.getElementById("deckard").innerHTML = deckard;
     resetGame();
   }
 
