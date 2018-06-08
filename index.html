@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hangman Game">
+    <meta name="author" content="Gabe Scoggin">
+	<!-- bootstrap style sheet -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Make final css adjustments with personal stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+	<!-- This is what will be initially displayed on the screen -->
+	<!-- Using the bootstrap grid system to lay everything out -->
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<!-- <img src="assets/images/simpsonslogo.png" class="img-responsive" alt="Simpsons Logo"> -->
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<img src="assets/images/simpsonsheaderimage.jpg" class="img-responsive" alt="Simpsons Characters">
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-6">
+			<div class="row">
+				<!-- Next three divs have ids for js data manipulation -->
+				<div class="col-md-12" id="instructions"></div>
+				<div class="col-md-12" id="game"></div>
+				<div class="col-md-12" id="stats"></div>
+				<div class="col-md-12" id="guesses"></div>
+			</div>
+		</div>
+		<div class="col-md-2" id="homerImage">
+			<!-- This div has the homeImage id which will be used to change image via js -->
+			<img src="assets/images/homerthinking.png" class="img-responsive" alt="Homer">
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+
+	<!-- Link to game javascript  -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
