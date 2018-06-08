@@ -2,10 +2,14 @@
 //----------------------------------------
 // Define the list of words the computer will select from
 var wordList = [
-  "bird", 
-  "pelican", 
-  "goose", 
-  "chicken"
+  "deckard", 
+  "roy", 
+  "tyrell", 
+  "rachel",
+  "blade runner",
+  "voight kampff",
+  "replicant"
+
 ];
 // Define the list of possible letter selections
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q","r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -85,7 +89,7 @@ function gameProgress() {
   /*show game progress in HTML, display printWord by building 
   HTML string for it, set HTML for output display*/
   for (i = 0, j = 0; i < (printWord.length / 2); i++) {
-    if (printWord[j+1] === true) {
+    if (printWord[j+1] == true) {
       html += printWord[j];
   } else {
       html += "_";
@@ -124,10 +128,10 @@ function checkUserGuess() {
   }
 
   //if userGuess exists in the array then change is associated array pair from false to true
-  for (var i = 0; i < printWord.lenght; i++) {
+  for (var i = 0; i < printWord.length; i++) {
     if (printWord[i] === userGuess) {
       // if the letter wasn't already guessed then play audio
-      if (printWord[i+1] === false) {
+      if (printWord[i+1] == false) {
         var audio = new Audio("assets/audio/mp3b.mp3");
         audio.play();
       }
@@ -144,7 +148,9 @@ function hasUserWon() {
     //user has won, increment wins
     wins++;
     //add image and audio HTML if you have time. 
-  resetGame();
+  var deckard="<img <src=\"assets/images/deckard.jpg\" class=\"img-responsive\" alt=\"Blade Runner Deckard\">";
+  document.querySelector("deckard").innerHTML = deckard;
+    resetGame();
   }
 
 };
@@ -152,7 +158,7 @@ function hasUserWon() {
 // function to see whether the user has lost
 function hasUserLost() {
   //check to see if the user has won
-  if (guessesLeft === 0 ) {
+  if (guessesLeft == 0 ) {
     console.log("USER LOSES");
     //user has won, increment wins
     losses++;
